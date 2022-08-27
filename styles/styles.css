@@ -1,0 +1,12 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px){
+    .d-flex{
+        /* align-items: center; */
+        justify-content: center;
+    }
+}
