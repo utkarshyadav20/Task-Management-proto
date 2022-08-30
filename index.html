@@ -15,7 +15,27 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
+  <!-- modal -->
+  <div class="modal fade" id="AddNew" tabindex="-1" aria-labelledby="AddNewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="AddNewLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand fw-semibold" href="#">To Do List</a>
@@ -29,32 +49,45 @@
           </li>
           </ul>
         <form class="d-flex" role="search">
-          <button class="btn btn-dark" type="submit">
+          <button class="btn btn-dark" type="submit" data-bs-toggle="modal" data-bs-target="#AddNew">
             <i class="fa-solid fa-plus"></i>
-            Add New</button>
+            Add New
+          </button>
         </form>
       </div>
     </div>
   </nav>
 
 <div class="container">
-  <section class="mt-4"></section>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-         <div class="input-group flex-nowrap shadow-lg">
-          <input type="search"
-              class="form-control"
-              placeholder="Search Task..."
-              aria-describedby="addon-wrapping"
-              aria-label="Search Task"
-          >
-         </div>
+  <section class="mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+           <div class="input-group flex-nowrap shadow-lg rounded">
+            <input type="search"
+                class="form-control"
+                placeholder="Search Task..."
+                aria-describedby="addon-wrapping"
+                aria-label="Search Task"
+            >
+            <span class="input-group-text" id="addon-wrapper">
+              <i class="fa fa-search"></i>
+            </span>
+           </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <section class="mt-8">
+    <div class="row task_content"></div>
+  </section>
 </div>
 
 
-
+<div class="Mobile-add-new-btn">
+  <button class="btn btn-dark" type="submit" data-bs-toggle="modal" data-bs-target="#AddNew">
+    <i class="fa-solid fa-plus"></i>
+    Add New
+  </button>
+</div>
 
 
 
