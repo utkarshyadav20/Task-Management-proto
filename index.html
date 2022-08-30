@@ -21,16 +21,34 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="AddNewLabel">Modal title</h5>
+          <h5 class="modal-title" id="AddNewLabel">Add New Task</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <form>
+            <div class="mb-3">
+              <label for="Image-URL" class="col-form-label">Image URL</label>
+              <input type="url" class="form-control" id="Image-URL" placeholder="https://example.com">
+            </div>
+            <div class="mb-3">
+              <label for="Title-text" class="col-form-label">Task Title</label>
+              <input type="text" class="form-control" id="Title-text" placeholder=" Title..." required></input>
+            </div>
+            <div class="mb-3">
+              <label for="Task-Type" class="col-form-label">Task type</label>
+              <input type="text" class="form-control" id="Task-Type" placeholder="Work, Study, Appointment..." ></input>
+            </div>
+            <div class="mb-3">
+              <label for="Task-Des" class="col-form-label">Task type</label>
+              <textarea type="text" class="form-control" id="Task-Des" placeholder="..." ></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+              <button type="submit" type="submit" class="btn btn-outline-success">Save changes</button>
+            </div>
+          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-success">Save changes</button>
-        </div>
+     
       </div>
     </div>
   </div>
@@ -61,6 +79,7 @@
   </nav>
 
   <div class="container">
+    <!-- search section -->
     <section class="mt-4">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -74,10 +93,22 @@
         </div>
       </div>
     </section>
-    <section class="mt-8">
-      <div class="row task_content"></div>
+    <!-- search section -->
+
+    <!-- body section -->
+    <section class="mt-4">
+      <div class="row task_content">
+        
+      </div>
     </section>
+    <!-- body section -->
+
   </div>
+
+
+
+
+
 
 
   <div class="Mobile-add-new-btn">
