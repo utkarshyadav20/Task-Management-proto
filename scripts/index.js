@@ -26,5 +26,8 @@ const state={
       
 };
 
-// accessing the empty div we created inside our DOM to save the info entered by the user insite the a variable with the help of document.query
-document.querySelector(".task_content");
+// accessing the empty div we created inside our DOM to save the info entered by the user insite the a variable with the help of document.querysSelector() method
+const taskContent=document.querySelector(".task_content");
+//after saving the info inside our DOM we also need to access it we  do this with the help of taskModal variable we craeted
+const taskModal=document.querySelector(".task_modal_body");
+console.log(taskContent);

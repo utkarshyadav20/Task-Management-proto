@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <!-- modal -->
+  <!-- modal for saving -->
   <div class="modal fade" id="AddNew" tabindex="-1" aria-labelledby="AddNewLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -52,7 +52,25 @@
       </div>
     </div>
   </div>
-  <!-- modal -->
+  <!-- modal for saving-->
+  <!-- moadal for opening -->
+  <div class="modal fadeg" id="ShowTasks" tabindex="-1" aria-labelledby="ShowTasksLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ShowTasksLabel">Task Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body task_modal_body">
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--moadal for opening  -->
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand fw-semibold" href="#">To Do List</a>
