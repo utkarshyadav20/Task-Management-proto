@@ -1,26 +1,6 @@
-// making a state object to store the inf given by the user object->array->object is used to provide further functionality so that we can add new stuff easily whenever we update our website
+// making a state object to store the info given by the user object->array->object is used to provide further functionality so that we can add new stuff easily whenever we update our website
 const state={
     taskList:[
-        {
-         Image_url:"",
-         Task_title:"",
-         Task_type:"",
-         Task_des:"",
-        },
-        {
-            Image_url:"",
-            Task_title:"",
-            Task_type:"",
-            Task_des:"",
-   
-        },
-        {
-            Image_url:"",
-            Task_title:"",
-            Task_type:"",
-            Task_des:"",
-   
-        },
 
     ],
       
@@ -30,7 +10,6 @@ const state={
 const taskContent=document.querySelector(".task_content");
 //after saving the info inside our DOM we also need to access it we  do this with the help of taskModal variable we craeted
 const taskModal=document.querySelector(".task_modal_body");
-console.log(taskContent);
 //making a function to add html in the DOM whenerver new entry is created
 const CreateTaskContent=({id,url,title,description,type})=>{`
 <div class="col-md-6 col-lg-4 mt-3 " id=${id} key=${id}>
@@ -82,7 +61,15 @@ const AccessTaskContent=({id,url,title,description,type})=>{
      
     </div>
 `;
-
-
 };
-
+//saving the data to local storage
+const updateLocalStorage= () => {
+   localStorage.setItem("tasks",JSON.stringify({
+    task:state.taskList,
+   }));
+};
+//getting the data from local storage
+const loadInitialdata=()=>{
+    const localStorageCopy=JSON.parse(localStorage.tasks);
+    
+};
