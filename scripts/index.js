@@ -31,8 +31,8 @@ const taskContent=document.querySelector(".task_content");
 //after saving the info inside our DOM we also need to access it we  do this with the help of taskModal variable we craeted
 const taskModal=document.querySelector(".task_modal_body");
 console.log(taskContent);
-//making a function to add html in the DOM
-const taskTaskContent=({id,url,title,description,type})=>{`
+//making a function to add html in the DOM whenerver new entry is created
+const CreateTaskContent=({id,url,title,description,type})=>{`
 <div class="col-md-6 col-lg-4 mt-3 " id=${id} key=${id}>
   <div class="card shadow-sm task_card">
     <div class="card-header d-flex gap-2 justify-content-end task_card_header">
@@ -61,10 +61,28 @@ const taskTaskContent=({id,url,title,description,type})=>{`
        <button type="button" class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#ShowTasks">Open Task</button>
     </div>
   </div>
-  </div>
+  </div>   
 `
 
 };
+// making a function to acces a saved enrty
+
+const AccessTaskContent=({id,url,title,description,type})=>{
+  //we used parse int because the attributes like id,url,title,description,type are saved in the form of a string to convert them into int we use the parseInt
+     const date=new Date(parseInt(id));    //inserting the unique current date and time as id
+     return `
+     <div id=${id}>
+     ${url &&
+
+      ` <img src=${url} alt="Image" class="img-fluid place_holder_image mb-3">`
+     }
+     <strong class="text-sm-start text-muted">Created on ${date.toDateString()}</strong>
+     <h2 class="my-3">${title}</h2>
+     <p class="Lead">${description}</p>
+     
+    </div>
+`;
 
 
+};
 
