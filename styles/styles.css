@@ -6,7 +6,7 @@
 .Mobile-add-new-btn{
     position: fixed;
     bottom: 0;
-    right: 0;
+    /* right: 0; */
     padding: 15px 10px;
     background: white;
     z-index: 3;
