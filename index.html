@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <!-- modal for saving -->
+  <!-- modal for opening -->
   <div class="modal fade" id="AddNew" tabindex="-1" aria-labelledby="AddNewLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -52,11 +52,11 @@
       </div>
     </div>
   </div>
-  <!-- modal for saving-->
+  <!-- modal for opening-->
 
 
-  <!-- moadal for opening -->
-  <div class="modal fadeg" id="ShowTasks" tabindex="-1" aria-labelledby="ShowTasksLabel" aria-hidden="true">
+  <!-- moadal for opeing after saving -->
+  <div class="modal fade" id="ShowTasks" tabindex="-1" aria-labelledby="ShowTasksLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -64,7 +64,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body task_modal_body">
-         
+                          <!-- data about the task that we will open after saving -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -72,7 +72,7 @@
       </div>
     </div>
   </div>
-  <!--moadal for opening  -->
+  <!--moadal for  opening after saving  -->
 
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg bg-light">
@@ -121,6 +121,10 @@
     <section class="container mt-4">
       <div class="row task_content">
         This will show my saved tasks
+
+
+        
+        
       </div>
     </section>
     <!-- body section -->
