@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body onload="LoadInitialData()">
   <!-- modal for opening -->
   <div class="modal fade" id="AddNew" tabindex="-1" aria-labelledby="AddNewLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -25,7 +25,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form >
             <div class="mb-3">
               <label for="Image-URL" class="col-form-label">Image URL</label>
               <input type="url" class="form-control" id="Image-URL" placeholder="https://example.png">
@@ -44,7 +44,7 @@
             </div>
             
               <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-              <button type="submit" type="submit" class="btn btn-outline-success">Save changes</button>
+              <button type="submit" type="submit" class="btn btn-outline-success"  onclick="handleSubmit()">Save changes</button>
             
           </form>
         </div>
@@ -120,8 +120,11 @@
     <!-- body section -->
     <section class="container mt-4">
       <div class="row task_content">
-        This will show my saved tasks
+                                      
 
+
+
+        
 
         
         
