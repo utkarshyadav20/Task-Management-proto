@@ -23,8 +23,10 @@ const htmlTaskContent=({id,title,description,type,url})=>
 
              <div class="card-body">
               ${
-                url && //if url is entered then only show the next line 
+                url ? //if url is entered then only show the next line 
                 `<img  width="100%" height="150px" style="object-fit:cover; object-position:centre" src=${url} alt="card image" class="card-img-top md-3 rounded-lg">`
+                :
+                `<img  width="100%" height="150px" style="object-fit:cover; object-position:centre" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="card image" class="card-img-top md-3 rounded-lg">`
               }
               <h4 class="mt-2 task_card_title">${title}</h4>
 
@@ -38,11 +40,14 @@ const htmlTaskContent=({id,title,description,type,url})=>
           <button type="button" 
             class="btn btn-outline-primary flaot-right" 
             data-bs-toggle="modal" 
-            data-bs-target="#ShowTasks"> 
+            data-bs-target="#ShowTasks"
+            id=${id}
+            onclick="openTask.apply(this,arguments)"
+            > 
             Open Task
           </button>
        </div>      
-         </div>
+        </div>
        </div>
     </div>
     `;
@@ -53,15 +58,18 @@ const htmlModalContent=({id,title,description,url})=>{
     return `
       <div id=${id}>
         ${
-          url && `
-             <img width="100%" src=${url} alt="card img cap" class="img-fluid place__holder__image mb-3">
+          url ?
           `
+           <img width="100%" height="300px" style="object-fit:cover; object-position:centre" src=${url} alt="card img cap" class="card-img-top md-3 mb-3 rounded-lg"/>
+          `
+          :
+          `<img  width="100%" height="300px" style="object-fit:cover; object-position:centre" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="card image" class="card-img-top md-3 mb-3 rounded-lg"/>`
         }
-        <strong class="text-sm text-muted">Created on${date.toDateString()}</strong>
+        <strong class="text-sm text-muted">Created on ${date.toDateString()}</strong>
         <h2 class="my-3">${title}</h2>
         <p class="lead">
           ${description}
-        <p/>
+        </p>
       </div>
     `;
 };
@@ -107,3 +115,8 @@ const handleSubmit=(event)=>{
 
 };
 
+const openTask=(e)=>{
+    if(!e) e=window.event;
+    const getTask=state.tasklist.find(({id})=>id===e.target.id);
+    taskMOdal.innerHTML=htmlModalContent(getTask);
+};
