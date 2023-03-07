@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/index.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -23,7 +23,7 @@
   <body onload="loadInitialData()">
     <div class="add__new__btn__mobile__only d-md-none">
       <button
-        class="btn btn-primary d-flex align-items-center gap-2"
+        class="btn btn-dark d-flex align-items-center gap-2"
         type="submit"
         data-bs-toggle="modal"
         data-bs-target="#addNewModal"
@@ -95,7 +95,7 @@
               </div>
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-outline-danger"
                 data-bs-dismiss="modal"
               >
                 Close
@@ -103,7 +103,7 @@
               <button
                 type="submit"
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-outline-success"
                 onclick="handleSubmit()"
               >
                 Save changes
@@ -167,7 +167,7 @@
             </li>
           </ul>
           <button
-            class="btn btn-primary d-flex align-items-center gap-2"
+            class="btn btn-dark d-flex align-items-center gap-2"
             type="submit"
             data-bs-toggle="modal"
             data-bs-target="#addNewModal"

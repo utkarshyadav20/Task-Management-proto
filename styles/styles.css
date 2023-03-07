@@ -3,7 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.Mobile-add-new-btn{
+.add__new__btn__mobile__only{
     position: fixed;
     bottom: 0;
     /* right: 0; */
